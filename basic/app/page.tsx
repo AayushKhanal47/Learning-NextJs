@@ -1,5 +1,3 @@
-
-
 export default function Home() {
-  return <div>hello next</div>;
+  return <div className="mt-4">hello next</div>;
 }

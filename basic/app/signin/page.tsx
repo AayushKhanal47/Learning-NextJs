@@ -41,7 +41,7 @@ export default function Signin() {
 
         <p className="text-sm text-center text-gray-600">
           Don’t have an account?
-          <a href="#" className="text-blue-600 font-medium ml-1">
+          <a href="/signup" className="text-blue-600 font-medium ml-1">
             Sign Up
           </a>
         </p>
