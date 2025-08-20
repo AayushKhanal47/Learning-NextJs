@@ -1,10 +1,15 @@
+"use client";
+
 export default function SignInComponents() {
+  function handler() {
+    console.log("hi there");
+  }
   return (
     <div className="h-screen flex justify-center items-center bg-gray-100">
       <div className="w-[400px] p-8 bg-white rounded-2xl shadow-lg space-y-6">
         <div className="text-center">
           <h1 className="text-3xl font-bold">Sign In</h1>
-          <p className="text-gray-500 mt-2">Please sign in to continue</p>
+          <p className="text-gray-500 mt-2">Please sign in to continue</p>  
         </div>
 
         <form className="space-y-4">
@@ -33,6 +38,7 @@ export default function SignInComponents() {
           </div>
 
           <button
+            onClick={handler}
             type="submit"
             className="w-full bg-blue-500 text-white mt-2 py-3 rounded-lg hover:bg-blue-700 transition">
             Sign In
