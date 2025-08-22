@@ -1,6 +1,6 @@
 import axios from "axios"
 async function getUserDetails (){
-  const response = await axios.get("https://backend.aayushkhanal810.workers.dev/api/v1/jobs")
+  const response = await axios.get("https://localhost3000/api/user")
   return response.data
 }
 
