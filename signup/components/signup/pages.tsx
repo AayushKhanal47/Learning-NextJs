@@ -1,9 +1,12 @@
 "use client";
+import axios from "axios";
+
+import { useState } from "react";
 
 export default function SignInComponents() {
-  function handler() {
-    console.log("hi there");
-  }
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <div className="h-screen flex justify-center items-center bg-gray-100">
       <div className="w-[400px] p-8 bg-white rounded-2xl shadow-lg space-y-6">
@@ -38,15 +41,19 @@ export default function SignInComponents() {
           </div>
 
           <button
-            onClick={handler}
-            type="submit"
+            onClick={() => {
+              axios.post("http://localhost3000/api/user", {
+                email,
+                password,
+              });
+            }}
             className="w-full bg-blue-500 text-white mt-2 py-3 rounded-lg hover:bg-blue-700 transition">
             Sign In
           </button>
         </form>
 
         <p className="text-sm text-center text-gray-600">
-          Don’t have an account?
+          Dont have an account?
           <a href="/signup" className="text-blue-600 font-medium ml-1">
             Sign Up
           </a>
